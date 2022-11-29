@@ -1,13 +1,25 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.utils.translation import get_language, activate, gettext_lazy as _
+from django.utils.translation import get_language, activate, gettext_lazy as _, ngettext
 
 
 def home_view(request):
     name = 'Ashish'
-    translate(language='bn')
+    # translate(language='bn')
+
+    # pluralization
+    count = 5
+    data = ngettext(
+        'there is %(count)d object',
+        'there is %(count)d objects',
+        count
+    ) % {
+        'count': count,
+    }
+
     context = {
-        'output': _("Hello %(name)s") % {'name': name}
+        'output': _("Hello %(name)s") % {'name': name},
+        'data': data,
     }
     return render(request, 'django_lang/index.html', context)
 
@@ -21,6 +33,3 @@ def translate(language):
 
     finally:
         activate(current_lang)
-
-
-

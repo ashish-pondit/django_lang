@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-29 10:46+0000\n"
+"POT-Creation-Date: 2022-11-29 11:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,23 +26,30 @@ msgstr "English"
 msgid "Bangla"
 msgstr "Bangla"
 
-#: django_lang/settings.py:126
-msgid "Chinese"
-msgstr "Chinese"
-
 #: django_lang/settings.py:127
 msgid "Arabic"
 msgstr "Arabic"
 
-#: django_lang/templates/django_lang/index.html:46
+#: django_lang/templates/django_lang/index.html:51
 msgid "Hello, Welcome to Earth"
 msgstr "Hello, Welcome to Earth"
 
-#: django_lang/views.py:10
+#: django_lang/views.py:13
+#, python-format
+msgid "there is %(count)d object"
+msgid_plural "there is %(count)d objects"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] "%(count)d টি বই "
+
+#: django_lang/views.py:22
 #, python-format
 msgid "Hello %(name)s"
 msgstr "Hello %(name)s"
 
-#: django_lang/views.py:20
+#: django_lang/views.py:33
 msgid "Hello"
 msgstr ""
+
+#~ msgid "Chinese"
+#~ msgstr "Chinese"

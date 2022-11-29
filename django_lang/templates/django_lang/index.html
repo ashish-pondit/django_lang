@@ -21,6 +21,13 @@
         padding: 1rem;
         background-color: rgba(200,200,200,1);
     }
+    .border{
+        border-width: 2px;
+        border-color: rgba(0,0,150,1);
+        border-style: dashed;
+        padding: 1rem;
+    }
+
 </style>
 
     <header>
@@ -38,13 +45,19 @@
     </header>
     <main>
 
-        <h3> This is variable: </h3>
+        <div class="border">
+            <h3> This is variable: </h3>
+            <p>{{ output }}</p>
+            <h4> {% translate "Hello, Welcome to Earth" %} </h4>
+        </div>
 
-        <p>
-            {{ output }}
-        </p>
+        <div class="border">
+            <h3>Pluralization on test</h3>
+            <p>
+                {% translate data %}
+            </p>
+        </div>
 
-        <h4> {% translate "Hello, Welcome to Earth" %} </h4>
     </main>
     <footer>
         <ul>
