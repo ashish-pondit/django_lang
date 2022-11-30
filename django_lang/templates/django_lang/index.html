@@ -1,7 +1,6 @@
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
-{% get_current_language_bidi as LANGUAGE_BIDI %}
-<html dir="{{direction}}">
+<html dir='{% if LANGUAGE_CODE == "ar" %}rtl{% else %}ltr{% endif %}'>
 <head>
   <title>Hello, world!</title>
   <meta charset="UTF-8" />

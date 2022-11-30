@@ -17,15 +17,9 @@ def home_view(request):
         'count': count,
     }
 
-    if request.LANGUAGE_CODE == 'ar':
-        direction = 'rtl'
-    else:
-        direction = 'ltr'
-
     context = {
         'output': _("Hello %(name)s") % {'name': name},
         'data': data,
-        'direction': direction
     }
     return render(request, 'django_lang/index.html', context)
 
